@@ -10,7 +10,7 @@ opstartFolder = os.path.join(os.getenv('APPDATA'), r'Microsoft\Windows\Start Men
 appName = "power.exe"
 if not os.path.exists(os.path.join(opstartFolder, appName)):
     command('copy power.exe "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"')
-    if messagebox.askyesno("power.exe", 'De app is succesvol geïnstalleerd. Om de installatie te voltooien moet u uw computer opnieuw opstarten.\nDruk op "yes" om u cimputer opnieuw op te starten.'):
+    if messagebox.askyesno("power.exe", 'De app is succesvol geïnstalleerd. Om de installatie te voltooien moet u uw computer opnieuw opstarten.\nDruk op "yes" om u computer opnieuw op te starten.'):
         command('shutdown /r /t 10 /c "U computer wordt opnieuw opgestart om de installatie te voltooien."')
 
 else:
