@@ -1,16 +1,22 @@
-#Speciaal gemaakt voor Benthe.
+#Speciaal gemaakt voor Benthe. Aangepast voor KOGEKA
 #pyinstaller command: pyinstaller power.pyw --onefile -n "power.exe" -i power.ico -w
 import pystray
 import PIL.Image
-from os import system as command
+from subprocess import run as command
 import os
 from tkinter import messagebox
+from winotify import Notification, audio
+import shutil
+import webbrowser
 
+website = "https://github.com/De-nerd/shutdown"
 opstartFolder = os.path.join(os.getenv('APPDATA'), r'Microsoft\Windows\Start Menu\Programs\Startup')
+tempFolder = os.getenv('TEMP')
+currentFolder = os.getcwd()
 appName = "power.exe"
 if not os.path.exists(os.path.join(opstartFolder, appName)):
-    command('copy power.exe "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"')
-    if messagebox.askyesno("power.exe", 'De app is succesvol geïnstalleerd. Om de installatie te voltooien moet u uw computer opnieuw opstarten.\nDruk op "yes" om u computer opnieuw op te starten.'):
+    shutil.copy(os.path.join(currentFolder, appName), opstartFolder)
+    if messagebox.askyesno(appName, 'De app is succesvol geïnstalleerd. Om de installatie te voltooien moet u uw computer opnieuw opstarten.\nDruk op "yes" om u computer opnieuw op te starten.'):
         command('shutdown /r /t 10 /c "U computer wordt opnieuw opgestart om de installatie te voltooien."')
 
 else:
@@ -18,22 +24,36 @@ else:
 
     img = PIL.Image.new("RGBA", (64, 64))
     img.putdata(pixels)
+    if not os.path.exists(f"{tempFolder}/power/power.png"):
+        os.mkdir(f"{tempFolder}/power/")
+        img.save(f"{tempFolder}/power/power.png")
+    toast = Notification(
+        app_id=appName,
+        title="Herstel afsluiten",
+        msg="Beste leerling, gelieve met je toestel even langs de ICT-dienst te gaan.\nDoet dit binnen de 5 schooldagen!",
+        duration="long",
+        icon=f"{tempFolder}/power/power.png",
+    )
+    toast.set_audio(audio.Reminder, loop=True)
 
-
-    def shutdown(icon, item):
-        command('shutdown /s /t 10 /c "Afsluiten in 10 seconden"')
-    def reboot(icon, item):
-        command('shutdown /r /t 10 /c "Opnieuw opstarten in 10 seconden"')
+    def shutdown():
+        toast.show()
+        command('shutdown /s /t 10 /c "Afsluiten in 10 seconden"', shell=True)
+    def reboot():
+        toast.show()
+        command('shutdown /r /t 10 /c "Opnieuw opstarten in 10 seconden"', shell=True)
     def logout():
-        command('shutdown /l')
-    def sleep(icon, item):
-        command('shutdown /h')
-    def lock(icon, item):
-        command('%systemroot%\\system32\\rundll32.exe user32.dll,LockWorkStation')
-    def cancel (icon, item):
-        command('shutdown /a')
+        command('shutdown /l', shell=True)
+    def sleep():
+        command('shutdown /h', shell=True)
+    def lock():
+        command('%systemroot%\\system32\\rundll32.exe user32.dll,LockWorkStation', shell=True)
+    def cancel ():
+        command('shutdown /a', shell=True)
     def stop ():
         icon.stop()
+    def info():
+        webbrowser.open(website)
 
     icon = pystray.Icon(name="power", icon=img, title="Energie opties", menu=pystray.Menu(
         pystray.MenuItem("Afsluiten", shutdown, default=True),
@@ -42,6 +62,7 @@ else:
         pystray.MenuItem("Slaapstand", sleep),
         pystray.MenuItem("Vergrendelen", lock),
         pystray.MenuItem("Annuleer afsluiten of opnieuw opstarten", cancel),
+        pystray.MenuItem("info", info),
         pystray.MenuItem("Exit", stop),
     )
                         )
