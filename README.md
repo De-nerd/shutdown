@@ -13,6 +13,7 @@ acties met rechter muis klik:
 
 - Afsluiten
 - Opnieuw opstarten
+- Uitloggen
 - Slaapstand
 - Vergrendelen
 - Anuleer afsluiten of opnieuw opstarten.
