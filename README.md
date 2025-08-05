@@ -9,12 +9,22 @@ Je moet voor alle acties geen dubbel klik te gebruiken, alles kan met enkel klik
 Om je laptop af te sluiten druk je met je linker muis knop op het aan- uitknop symbool.
 Voor meer opties druk je met je rechter muis knop op het icoontje, dan verschijnt er een lijst met alle mogelijke acties.
 
+De app checkt automatisch voor updates. (Alleen beschikbaar vanaf versie 5)
+Als je een nieuwere versie van de app download en gebruikt, update hij de standaard app automatisch naar de nieuwste versie.
+Als je internet verbinding hebt, controleert hij ook via Github op nieuwere versies via het bestand "version.info" bij in deze main repo.
+
 acties met rechter muis klik:
 
 - Afsluiten
 - Opnieuw opstarten
-- Uitloggen
+- Afmelden
 - Slaapstand
 - Vergrendelen
 - Anuleer afsluiten of opnieuw opstarten.
+- info
+-   Versie
+-   Github
+-   Whatsapp Channel
+-   Whatsapp Community
+- Verwijder
 - Exit (dit sluit de app zelf)
