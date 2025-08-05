@@ -22,9 +22,9 @@ acties met rechter muis klik:
 - Vergrendelen
 - Anuleer afsluiten of opnieuw opstarten.
 - info
--   Versie
--   Github
--   Whatsapp Channel
--   Whatsapp Community
+   - Versie
+   - Github
+   - Whatsapp Channel
+   - Whatsapp Community
 - Verwijder
 - Exit (dit sluit de app zelf)
