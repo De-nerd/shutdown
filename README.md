@@ -1,4 +1,5 @@
-# shutdown
+# Shutdown app (power.exe)
+# ! Belangrijk: hernoem de app niet! Als je hem hernoemt, werkt hij niet meer !
 Een app om je laptop mee af te sluiten en nog veel meer als je het niet kan doen via het start menu.
 
 Als je de app voor de 1ste keer opstart, dan kopieërt hij zichzelf in je opstart folder zodat hij altijd mee opstart met je laptop.
@@ -21,7 +22,7 @@ acties met rechter muis klik:
 - Slaapstand (Zet het apparaat in slaapstand)
 - Vergrendelen (Vergrendeld het apparaat)
 - Anuleer afsluiten of opnieuw opstarten. (Anuleert het afsluiten of opnieuw opstarten van ja apparaat en toont een melding van succes)
-- info (Als je je cursor over dit vakje plaatst, klikken is niet noodzakelijk, verschijnt er een submenu met de volgende opties)
+- Info (Als je je cursor over dit vakje plaatst, klikken is niet noodzakelijk, verschijnt er een submenu met de volgende opties)
    - Versie (Toont de huidige versie van de app)
    - Github (Opent deze Github pagina in je standaard browser)
    - Whatsapp Channel (Opent in je standaard browser de uitnodiging om deel te nemen aan mijn Whatsapp kanaal)
