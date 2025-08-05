@@ -15,16 +15,16 @@ Als je internet verbinding hebt, controleert hij ook via Github op nieuwere vers
 
 acties met rechter muis klik:
 
-- Afsluiten
-- Opnieuw opstarten
-- Afmelden
-- Slaapstand
-- Vergrendelen
-- Anuleer afsluiten of opnieuw opstarten.
-- info
-   - Versie
-   - Github
-   - Whatsapp Channel
-   - Whatsapp Community
-- Verwijder
-- Exit (dit sluit de app zelf)
+- Afsluiten (Sluit je apparaat af na 10 seconden en geeft je een waarschuwing)
+- Opnieuw opstarten (Start je apparaat opnieuw op na 10 seconden en geeft je een waarschuwing)
+- Afmelden (Logt de huidig actieve gebruiker uit)
+- Slaapstand (Zet het apparaat in slaapstand)
+- Vergrendelen (Vergrendeld het apparaat)
+- Anuleer afsluiten of opnieuw opstarten. (Anuleert het afsluiten of opnieuw opstarten van ja apparaat en toont een melding van succes)
+- info (Als je je cursor over dit vakje plaatst, klikken is niet noodzakelijk, verschijnt er een submenu met de volgende opties)
+   - Versie (Toont de huidige versie van de app)
+   - Github (Opent deze Github pagina in je standaard browser)
+   - Whatsapp Channel (Opent in je standaard browser de uitnodiging om deel te nemen aan mijn Whatsapp kanaal)
+   - Whatsapp Community (Opent in je standaard browser de uitnodiging om deel te worden van mijn volgers groep om te praten over mijn projecten)
+- Verwijder (Verwijderd de afsluitapp van je apparaat)
+- Exit (Sluit de app zelf)
