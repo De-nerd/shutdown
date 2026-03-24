@@ -27,5 +27,7 @@ acties met rechter muis klik:
    - Github (Opent deze Github pagina in je standaard browser)
    - Whatsapp Channel (Opent in je standaard browser de uitnodiging om deel te nemen aan mijn Whatsapp kanaal)
    - Whatsapp Community (Opent in je standaard browser de uitnodiging om deel te worden van mijn volgers groep om te praten over mijn projecten)
+- Actie (Toont een dialoogbox om het actiegetal in te voeren, momenteel werkt alleen het getal "69", dit opent in je webbrowser de url van het liedje "never gonna give you up" van "Rick Astley", ook wel bekend als de Rickroll)
+- Check voor updates (Controleer handmatig voor updates zonder je laptop of de app opnieuw op te starten. Let op, deze functie is nog niet helemaal getest, er kunnen nog foutjes in zitten, gelieve deze foutjes dan aan mij door te geven of maak er een melding van hier op Github.)
 - Verwijder (Verwijderd de afsluitapp van je apparaat)
 - Exit (Sluit de app zelf)
